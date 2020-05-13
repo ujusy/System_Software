@@ -1,7 +1,7 @@
 # System_Software
 -----------
 
-**이 repo는 시스템 소프트웨어를 공부하면서 구현 및 공부한 것을 정리한 repo입니다. **
+#### 이 repo는 시스템 소프트웨어를 공부하면서 구현 및 공부한 것을 정리한 repo입니다. 
 
 ## 1. File System
 
@@ -34,3 +34,26 @@
 3. filedescripter.c
 
    >표준 입력에서 데이터를 받아 이를 처리하고 결과를 표준 출력으로 출력하는 수행화일 P가 있다. 프로그램 P를 변경하지 않고 표준 입력 대신 파일 A에서 입력을 받고, 표출 출력 대신 파일 B로 결과를 저장하는 방법을 코딩하시오. *(힌트: dup() 또는 dup2()를 사용하여 표준 입출력을 redirection 하고, 이를 child 에게 전달함. child는 exec()후에도 open file descriptor를 유지함)*
+
+## 3.Process
+
+--------
+
+file A, B, C, D의 내용을 읽고 파일들에 있는 숫자들의 총합계를 계산하려고 한다. (1) 프로세스 한 개가 이를 모두 수행하는 경우와 (2) 여러 개의 프로세스가 한 파일씩 담당하여 동시에 수행하고, 나중에 한 프로세스가 이를 모으는 방법이 있다. 어느 방법으로 수행하는 것이 빠른지 구현하고 실험적으로 비교하려고 한다. 
+
+<img width="136" alt="image-20200513234600696" src="https://user-images.githubusercontent.com/49120090/81827987-45527c00-9574-11ea-80ba-7f118a056cdd.png">
+
+이렇게 주어져 있는 4개의 파일에 들어있는 숫자의 총합을 계산하자.
+
+1. Single.c - 하나의 프로세스로 구현 
+
+   결과 - 
+
+   <img width="226" alt="image-20200513234714539" src="https://user-images.githubusercontent.com/49120090/81828016-4f747a80-9574-11ea-9f6b-1dffef8f5e64.png">
+
+2. multi.c - 여러개의 프로세스로
+
+   <img width="241" alt="image-20200513234746500" src="https://user-images.githubusercontent.com/49120090/81828031-51d6d480-9574-11ea-95d4-e8eeeffa3703.png">
+
+   
+
