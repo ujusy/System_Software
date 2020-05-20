@@ -54,5 +54,6 @@ file A, B, C, D의 내용을 읽고 파일들에 있는 숫자들의 총합계�
 2. multi.c - 여러개의 프로세스로
 
    <img width="241" alt="image-20200513234746500" src="https://user-images.githubusercontent.com/49120090/81828031-51d6d480-9574-11ea-95d4-e8eeeffa3703.png">
-
+ 
+ 마무리
    
